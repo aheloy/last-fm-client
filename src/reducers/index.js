@@ -1,7 +1,8 @@
-import * as ActionTypes from '../actions';  
 import { combineReducers } from 'redux';
 
+import artists from './artists';
+import artist from './artist';
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({ artists, artist });
 
 export default rootReducer;
