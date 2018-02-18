@@ -36,7 +36,7 @@ class ArtistsList extends React.Component {
         <List.Item>
           <List.Item.Meta
             avatar={<Avatar src={src} />}
-            title={<Link to={`/artist/${item.name}`}>{item.name}</Link>}
+            title={<Link to={`/artist/${item.mbid || null}/${item.name || null}`}>{item.name}</Link>}
           />
           <Badge
             count={item.listeners}

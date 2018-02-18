@@ -18,7 +18,8 @@ import { getAlbumsByArtist } from 'src/actions';
 @connect(
   (state, { match }) => ({
     albums: state.artist.albums,
-    name: match.params.name
+    name: match.params.name,
+    mbid: match.params.mbid,
   }), {
     getAlbumsByArtist
   }
@@ -26,17 +27,19 @@ import { getAlbumsByArtist } from 'src/actions';
 class ArtistPage extends React.Component {
   static propTypes = {
     name: PropTypes.string,
+    mbid: PropTypes.string,
     albums: PropTypes.arrayOf(PropTypes.object),
     getAlbumsByArtist: PropTypes.func.isRequired,
   }
 
   static defaultProps = {
     name: '',
+    mbid: '',
     albums: [],
   }
 
   componentDidMount() {
-    this.props.getAlbumsByArtist(this.props.name);
+    this.props.getAlbumsByArtist(this.props.mbid, this.props.name);
   }
 
   render() {

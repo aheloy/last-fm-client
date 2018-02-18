@@ -36,7 +36,7 @@ export const searchArtists = (text = '') => {
   };
 };
 
-export const getAlbumsByArtist = (mbid = '') => {
+export const getAlbumsByArtist = (mbid = '', name = '') => {
   return (dispatch) => {
     dispatch({
       type: request_suffix(GET_ARTIST_ALBUMS),
@@ -46,7 +46,8 @@ export const getAlbumsByArtist = (mbid = '') => {
       params: {
         method: 'artist.getTopAlbums',
         format: 'json',
-        artist: mbid,
+        name: name || undefined,
+        mbid: mbid || undefined,
       }
     });
 

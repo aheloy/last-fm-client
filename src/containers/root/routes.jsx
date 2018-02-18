@@ -7,7 +7,7 @@ import ArtistPage from 'src/containers/artist-page';
 const Routes = () => {
   return (
     <React.Fragment>
-      <Route path="/artist/:name" component={ArtistPage} exact />
+      <Route path="/artist/:mbid/:name" component={ArtistPage} exact />
       <Route path="/" component={SearchPage} exact />
     </React.Fragment>
   )
