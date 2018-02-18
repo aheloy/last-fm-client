@@ -20,10 +20,17 @@ class AlbumsList extends React.Component {
       const name = album.name;
       const mbid = album.mbid;
 
-      return src && name && mbid ?(
-        <Col span={8} key={album.mbid}>
+      return src && name && mbid ? (
+        <Col
+          xs={{ span: 24 }}
+          sm={{ span: 12 }}
+          md={{ span: 8 }}
+          lg={{ span: 8 }}
+          xl={{ span: 8 }}
+          key={album.mbid}
+        >
           <Card
-            style={{marginBottom: '16px'}}
+            style={{ marginBottom: '16px' }}
             cover={
               <img
                 alt={name}

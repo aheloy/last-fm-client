@@ -50,7 +50,7 @@ class ArtistsList extends React.Component {
     return (
       <List
         itemLayout="horizontal"
-        dataSource={this.props.artists.slice(0, 10)}
+        dataSource={this.props.artists}
         renderItem={renderItem}
       />
     );

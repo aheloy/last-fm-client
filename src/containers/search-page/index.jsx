@@ -18,11 +18,12 @@ import { searchArtists } from 'src/actions';
 
 const Wrapper = styled.div`
   width: 100%;
-  padding-top: 100px;
+  padding-top: 40px;
 `;
 
 const SearchWrapper = styled.div`
-  width: 400px;
+  max-width: 500px;
+  padding: 0 10px;
   margin: auto;
 `;
 

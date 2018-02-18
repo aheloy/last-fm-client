@@ -1,4 +1,5 @@
 import * as Actions from 'src/actions';
+import get from 'lodash/get';
 
 
 const initialState = {
@@ -14,7 +15,7 @@ const artists = (state = initialState, action) => {
 
     case Actions.success_suffix(Actions.GET_ARTIST_ALBUMS):
       return {
-        albums: action.payload.topalbums.album,
+        albums: get(action, 'payload.topalbums.album', []),
         status: 'success',
       };
 
